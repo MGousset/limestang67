@@ -5,9 +5,9 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 
 <template>
   <section
+    id="reseau"
     class="relative overflow-hidden bg-linear-to-br from-[#101010] via-[#242424] to-[#353535] px-5 py-16 text-white sm:px-8 sm:py-24"
     aria-labelledby="tiktok-title"
-    id="reseau"
   >
     <div
       class="absolute -left-20 top-0 size-72 rounded-full bg-[#25f4ee]/10 blur-3xl"

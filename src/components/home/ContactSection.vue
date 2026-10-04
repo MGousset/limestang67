@@ -71,9 +71,9 @@ const { openQuoteModal } = useQuoteModal()
         </a>
 
         <a
-          @click="openQuoteModal"
           class="cursor-pointer group flex items-center gap-5 rounded-2xl border border-white/15 bg-white/5 p-6 text-white no-underline transition duration-300 hover:-translate-y-1 hover:border-lime-light/70 hover:bg-white/10"
           aria-label="Envoyer un e-mail à Lime Stang 67"
+          @click="openQuoteModal"
         >
           <span
             class="flex size-14 shrink-0 items-center justify-center rounded-full bg-lime-light text-charcoal transition group-hover:scale-105"

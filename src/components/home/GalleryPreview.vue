@@ -46,7 +46,7 @@ const photos = [
 
       <div class="mt-12 grid gap-5 md:grid-cols-3">
         <figure
-          v-for="(photo, index) in photos"
+          v-for="(photo) in photos"
           :key="photo.src"
           :class="[
             'group relative overflow-hidden rounded-2xl bg-lime-light/20',
