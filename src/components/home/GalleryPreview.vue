@@ -1,6 +1,6 @@
 <script setup>
-import SectionTitle from '../ui/SectionTitle.vue'
-
+import SectionTitle from '@/components/ui/SectionTitle.vue'
+import BaseButton from '@/components/ui/BaseButton.vue'
 
 
 import mustang1Url from '@/assets/images/m5.png'
@@ -54,7 +54,9 @@ const photos = [
             ':hover: border-lime-light'
           ]"
         >
-          <img
+        <RouterLink
+          to="/galerie">
+        <img
             :src="photo.src"
             :alt="photo.alt"
             width="800"
@@ -65,15 +67,17 @@ const photos = [
 
           <div
             class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent opacity-60 transition group-hover:opacity-30"
-            aria-hidden="true"></div>
+            aria-hidden="true">
+          </div>
+        </RouterLink>
         </figure>
       </div>
 
       <div class="mt-12 text-center sm:mt-16">
         <RouterLink
-          to="/galerie"
-          class="inline-flex min-h-13 items-center justify-center rounded-full border-2 border-lime-light bg-lime-light px-7 py-3 font-sans text-base font-bold text-charcoal no-underline transition duration-300 hover:-translate-y-1 hover:border-lime-gold hover:bg-lime-gold hover:shadow-xl focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-lime-gold"
-        >
+          to="/galerie">
+        <BaseButton
+        variant="primary">
           Voir toutes les photos
 
           <svg
@@ -89,6 +93,10 @@ const photos = [
             <path d="M5 12h14" />
             <path d="m13 6 6 6-6 6" />
           </svg>
+        </BaseButton>
+          
+
+          
         </RouterLink>
       </div>
     </div>

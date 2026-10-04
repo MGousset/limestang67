@@ -478,7 +478,7 @@ onBeforeUnmount(() => {
                 </BaseButton>
 
                 <BaseButton
-                variant="primary"
+                  variant="primary"
                   type="submit"
                   :disabled="isSubmitting"
                 >

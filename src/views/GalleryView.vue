@@ -2,6 +2,10 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 import SectionTitle from '@/components/ui/SectionTitle.vue'
+import BaseButton from '@/components/ui/BaseButton.vue'
+import { useQuoteModal } from '@/composables/useQuoteModal'
+
+const { openQuoteModal } = useQuoteModal()
 
 
 import mustang1Url from '@/assets/images/m5.png'
@@ -335,10 +339,10 @@ onBeforeUnmount(() => {
             </a>
 
             <!-- E-mail : tablette et ordinateur -->
-            <a
-              href="mailto:arnaud_brisson@icloud.com?subject=Demande%20de%20devis%20mariage"
-              class="hidden min-h-13 items-center justify-center rounded-full border-2 border-charcoal bg-charcoal px-7 py-3 font-sans font-bold text-white transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:inline-flex"
-            >
+            <BaseButton
+              variant="dark"
+              @click="openQuoteModal"
+              >
               <svg
                 viewBox="0 0 24 24"
                 class="mr-2 size-5"
@@ -360,13 +364,15 @@ onBeforeUnmount(() => {
               </svg>
 
               Demander un devis
-            </a>
+            </BaseButton>
 
             <RouterLink
               :to="{ path: '/', hash: '#contact' }"
-              class="inline-flex min-h-13 w-full items-center justify-center rounded-full border-2 border-white bg-transparent px-7 py-3 font-sans font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-charcoal hover:shadow-xl sm:w-auto"
-            >
+              >
+            <BaseButton
+            variant="secondary">
               Voir les coordonnées
+              </BaseButton>
             </RouterLink>
           </div>
         </div>
