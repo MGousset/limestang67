@@ -1,0 +1,64 @@
+# Dépendances
+node_modules/
+
+# Fichiers générés par Vite
+dist/
+dist-ssr/
+
+# Rapports de tests et couverture
+coverage/
+
+# Variables d'environnement et secrets
+.env
+.env.local
+.env.*.local
+
+# Conserver un exemple sans données sensibles
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache
+.cache/
+.temp/
+.tmp/
+.eslintcache
+.stylelintcache
+
+# Vite
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE et éditeurs
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# VS Code : ignorer les réglages personnels,
+# mais conserver les extensions et réglages partagés du projet
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
