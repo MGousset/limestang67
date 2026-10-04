@@ -3,8 +3,7 @@ import { computed } from 'vue'
 
 const props = defineProps({
   href: {
-    type: String,
-    required: true,
+    type: String
   },
 
   variant: {
@@ -57,8 +56,7 @@ const variantClasses = computed(() => {
 </script>
 
 <template>
-  <Button
-    :href="href"
+  <button
     :target="external ? '_blank' : undefined"
     :rel="external ? 'noopener noreferrer' : undefined"
     :aria-label="ariaLabel || undefined"
@@ -66,7 +64,7 @@ const variantClasses = computed(() => {
       'cursor-pointer',
       'inline-flex min-h-13 items-center justify-center',
       'rounded-full border-2 px-7 py-3',
-      'font-sans text-base !font-bold no-underline',
+      'font-sans text-base font-bold! no-underline',
       'transition duration-300 ease-out',
       'hover:-translate-y-1 hover:shadow-xl',
       'focus-visible:outline-3 focus-visible:outline-offset-4',
@@ -75,5 +73,5 @@ const variantClasses = computed(() => {
     ]"
   >
     <slot />
-  </Button>
+  </button>
 </template>

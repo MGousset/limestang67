@@ -94,9 +94,6 @@ const photos = [
             <path d="m13 6 6 6-6 6" />
           </svg>
         </BaseButton>
-          
-
-          
         </RouterLink>
       </div>
     </div>

@@ -202,7 +202,7 @@ onBeforeUnmount(() => {
                 </p>
               </div>
 
-              <Button
+              <button
                 ref="closeButton"
                 type="button"
                 class="absolute right-5 top-5 flex size-11 cursor-pointer items-center justify-center rounded-full border border-white/25 bg-black/20 text-white transition hover:rotate-90 hover:border-lime-light hover:bg-lime-light hover:text-charcoal focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-lime-light"
@@ -221,7 +221,7 @@ onBeforeUnmount(() => {
                   <path d="M6 6l12 12" />
                   <path d="M18 6 6 18" />
                 </svg>
-              </Button>
+              </button>
             </div>
 
             <!-- Confirmation -->
