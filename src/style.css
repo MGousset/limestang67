@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+@theme {
+  --color-lime-gold: #b6c53d;
+  --color-lime-light: #dce77a;
+  --color-gold: #c59b45;
+  --color-charcoal: #151515;
+  --color-cream: #fff9e9;
+  --color-gray-text: #454545;
+}
+
+:root {
+  color: #454545;
+  background-color: #fff9e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fff9e9;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: #151515;
+  background-color: #dce77a;
+}
