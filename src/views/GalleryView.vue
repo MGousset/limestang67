@@ -3,6 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 import SectionTitle from '@/components/ui/SectionTitle.vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
+import BaseLink from '@/components/ui/BaseLink.vue'
 import { useQuoteModal } from '@/composables/useQuoteModal'
 
 const { openQuoteModal } = useQuoteModal()
@@ -315,9 +316,10 @@ onBeforeUnmount(() => {
             class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <!-- Téléphone : uniquement sur mobile -->
-            <a
+            <BaseLink
               href="tel:+33609897663"
-              class="inline-flex min-h-13 w-full items-center justify-center rounded-full border-2 border-charcoal bg-charcoal px-7 py-3 font-sans font-bold text-white transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:hidden"
+              variant="dark"
+              class="w-full sm:hidden"
               aria-label="Appeler Lime Stang 67 au 06 09 89 76 63"
             >
               <svg
@@ -336,10 +338,11 @@ onBeforeUnmount(() => {
               </svg>
 
               Appeler maintenant
-            </a>
+            </BaseLink>
 
             <!-- E-mail : tablette et ordinateur -->
             <BaseButton
+              class="w-full sm:w-auto" 
               variant="dark"
               @click="openQuoteModal"
               >
@@ -366,14 +369,15 @@ onBeforeUnmount(() => {
               Demander un devis
             </BaseButton>
 
-            <RouterLink
-              :to="{ path: '/', hash: '#contact' }"
-              >
             <BaseButton
-            variant="secondary">
-              Voir les coordonnées
-              </BaseButton>
-            </RouterLink>
+              class="w-full sm:w-auto"
+              variant="secondary">
+                <RouterLink
+                  :to="{ path: '/', hash: '#contact' }"
+                >
+                  Voir les coordonnées
+                </RouterLink>
+            </BaseButton>
           </div>
         </div>
       </div>

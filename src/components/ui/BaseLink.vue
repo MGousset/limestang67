@@ -2,6 +2,11 @@
 import { computed } from 'vue'
 
 const props = defineProps({
+  href: {
+    type: String,
+    required: true
+  },
+
   variant: {
     type: String,
     default: 'primary',
@@ -52,7 +57,8 @@ const variantClasses = computed(() => {
 </script>
 
 <template>
-  <button
+  <a
+    :href="href"
     :target="external ? '_blank' : undefined"
     :rel="external ? 'noopener noreferrer' : undefined"
     :aria-label="ariaLabel || undefined"
@@ -69,5 +75,5 @@ const variantClasses = computed(() => {
     ]"
   >
     <slot />
-  </button>
+</a>
 </template>

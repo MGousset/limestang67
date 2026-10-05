@@ -1,5 +1,5 @@
 <script setup>
-import BaseButton from '@/components/ui/BaseButton.vue'
+import BaseLink from '@/components/ui/BaseLink.vue'
 import SectionTitle from '@/components/ui/SectionTitle.vue'
 </script>
 
@@ -49,7 +49,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
       </p>
 
       <div class="mt-9">
-        <BaseButton
+        <BaseLink
           href="https://www.tiktok.com/@limestang67"
           variant="dark"
           external
@@ -74,7 +74,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
               d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
             />
           </svg>
-        </BaseButton>
+        </BaseLink>
       </div>
     </div>
   </section>

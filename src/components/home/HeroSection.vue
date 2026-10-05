@@ -1,5 +1,7 @@
 <script setup>
 import BaseButton from '@/components/ui/BaseButton.vue'
+import BaseLink from '@/components/ui/BaseLink.vue'
+
 import heroImageUrl from '@/assets/images/banner.jpeg'
 import { useQuoteModal } from '@/composables/useQuoteModal'
 
@@ -57,7 +59,7 @@ const { openQuoteModal } = useQuoteModal()
         class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row mb-5 sm:hidden"
       >
         <!-- Visible uniquement sur mobile -->
-        <BaseButton
+        <BaseLink
           href="tel:+33609897663"
           variant="primary"
           aria-label="Appeler Lime Stang 67 au 06 09 89 76 63"
@@ -90,7 +92,7 @@ const { openQuoteModal } = useQuoteModal()
           </svg>
 
           Appeler maintenant
-        </BaseButton>
+        </BaseLink>
 
         <!-- Formulaire sur tablette et ordinateur -->
         <BaseButton
